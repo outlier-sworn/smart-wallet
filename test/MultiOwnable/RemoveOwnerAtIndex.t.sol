@@ -30,3 +30,17 @@ contract RemoveOwnerAtIndexTest is RemoveOwnerBaseTest {
         mock.removeOwnerAtIndex(0, abi.encode(firstOnwer));
     }
 }
+import express from 'express';
+
+const app = express();
+
+// Health check endpoint
+app.get('/healthz', (req, res) => {
+  res.status(200).send('Service is up and running');
+});
+
+// Other routes go here
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
